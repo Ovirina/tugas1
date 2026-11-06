@@ -1,30 +1,23 @@
-
 export default function KontakPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-indigo-50 px-6 py-12 font-sans">
-
       <div className="w-full max-w-xl rounded-2xl border border-slate-200 bg-white p-8 shadow-xl sm:p-12">
-
         {/* Header */}
         <div className="mb-8 text-center">
           <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-100 text-3xl">
             ✉️
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-slate-800">
-            Kontak Saya
-          </h1>
+          <h1 className="text-3xl font-bold tracking-tight text-slate-800">Kontak Saya</h1>
 
           <p className="mt-3 text-sm leading-relaxed text-slate-500">
-            Jangan ragu untuk menghubungi saya.
-            Saya terbuka untuk diskusi, kolaborasi,
-            maupun peluang profesional.
+            Jangan ragu untuk menghubungi saya. Saya terbuka untuk diskusi, kolaborasi, maupun
+            peluang profesional.
           </p>
         </div>
 
         {/* Contact Information */}
         <div className="space-y-4">
-
           {/* Email */}
           <a
             href="mailto:ovirina.putri@gmail.com"
@@ -35,17 +28,13 @@ export default function KontakPage() {
             </div>
 
             <div className="min-w-0 flex-1">
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                Email
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Email</p>
               <p className="mt-1 break-all font-medium text-slate-700 group-hover:text-indigo-600">
                 ovirina.putri@gmail.com
               </p>
             </div>
 
-            <span className="text-slate-400 group-hover:text-indigo-600">
-              ↗
-            </span>
+            <span className="text-slate-400 group-hover:text-indigo-600">↗</span>
           </a>
 
           {/* GitHub */}
@@ -68,11 +57,8 @@ export default function KontakPage() {
               </p>
             </div>
 
-            <span className="text-slate-400 group-hover:text-indigo-600">
-              ↗
-            </span>
+            <span className="text-slate-400 group-hover:text-indigo-600">↗</span>
           </a>
-
         </div>
 
         {/* Footer */}
@@ -81,7 +67,6 @@ export default function KontakPage() {
             © {new Date().getFullYear()} Ovirina. All rights reserved.
           </p>
         </div>
-
       </div>
     </main>
   );

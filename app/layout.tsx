@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link"; 
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,104 +20,67 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-slate-50 text-slate-800">
-
         {/* Navbar */}
 
         <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
-
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-
             {/* Logo */}
 
             <Link
-
               href="/"
 
               className="text-xl font-bold tracking-tight text-blue-700"
-
             >
-
               <span className="block bg-gradient-to-r from-blue-900 to-cyan-600 bg-clip-text text-transparent">
                 Ovirina Putri Wardhani
               </span>
-
             </Link>
 
             {/* Navigation */}
 
             <div className="flex items-center gap-2 sm:gap-8">
-
               <Link
-
                 href="/"
 
                 className="rounded-lg bg-blue-800 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-500"
-
               >
-
                 Beranda
-
               </Link>
 
               <Link
-
                 href="/tentang"
 
                 className="rounded-lg bg-blue-800 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-500"
-
               >
-
                 Tentang
-
               </Link>
 
               <Link
-
                 href="/kontak"
 
                 className="rounded-lg bg-blue-800 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-500"
-
               >
-
                 Kontak
-
               </Link>
-
             </div>
-
           </div>
-
         </nav>
 
         {/* Main Content */}
 
-        <main className="flex-1">
-
-          {children}
-
-        </main>
+        <main className="flex-1">{children}</main>
 
         {/* Footer */}
 
         <footer className="border-t border-slate-200 bg-white py-6">
-
           <div className="mx-auto max-w-6xl px-6 text-center">
-
             <p className="text-sm text-slate-500">
-
               © {new Date().getFullYear()} Ovirina. All rights reserved.
-
             </p>
-
           </div>
-
         </footer>
-
       </body>
     </html>
   );
